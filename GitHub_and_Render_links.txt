@@ -1,0 +1,5 @@
+Project code at
+https://github.com/KayembaLuwaga/GPT3_OpenAI_psychic_app
+
+Online host link (Render.com):
+https://gpt3-openai-psychic-app.onrender.com/
