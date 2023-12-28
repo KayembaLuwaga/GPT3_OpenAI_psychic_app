@@ -4,6 +4,11 @@
 
 Emotional Design is a web application that leverages the power of OpenAI's GPT-3 to generate positive vibes and motivational quotes tailored to user preferences. This project aims to provide a platform for users to receive personalized uplifting messages based on their age group and gender.
 
+### Url:
+    
+    https://gpt3-openai-psychic-app.onrender.com/
+
+
 ## Features
 
 - **User Input**: Users can input their API key, age group, and gender to receive personalized quotes.
@@ -27,11 +32,11 @@ Emotional Design is a web application that leverages the power of OpenAI's GPT-3
    git clone https://github.com/yourusername/emotional-design.git
    cd emotional-design
 ### Install dependencies:
-    '''bash
+    
     pip install -r requirements.txt
 
 ### Run the application:
-    '''bash
+    
     python app.py
 
     The web app will be accessible at http://localhost:5000 in your browser.
