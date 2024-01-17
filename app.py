@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import openai
+import re
 
 app = Flask(__name__)
 
@@ -14,13 +15,16 @@ def get_openai_quotes(api_key, age_group, gender):
 
         # Make a request to the OpenAI API
         response = openai.Completion.create(
-            engine="text-davinci-002",  # Use an appropriate engine
+            engine="gpt-3.5-turbo-instruct",  # Use an appropriate engine
             prompt=prompt,
-            max_tokens=100  # Adjust based on your needs
+            max_tokens=2000  # Adjust based on your needs
         )
 
         # Extract the generated quote from the API response
         generated_quote = response['choices'][0]['text']
+
+        # Add new line feeds before numerals followed by a period or numerals followed by a closing parenthesis
+        generated_quote = re.sub(r'(\d+[\.\)])', r'\n<br>\1', generated_quote)
 
         return generated_quote
 

@@ -11,7 +11,7 @@
         <h1>Emotional Design: Positivity vibes and Motivation Quotes App</h1>
         <form action="/get_quotes" method="post">
             <label for="api_key">API Key(Please go to https://platform.openai.com/api-keys to get your OpenAI API key):</label>
-            <input type="password" name="api_key" id="api_key" required value="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">
+            <input type="password" name="api_key" id="api_key" required value="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">
             Show API Key<input type="checkbox" onclick="showHideApiKey()" style="align:left;"> <br/><br/><br/><hr/>
 
             <label for="age_group">Age Group:</label>
@@ -43,7 +43,8 @@
 
         {% if quotes %}
             <div class="quotes">
-                <p>{{ quotes }}</p>
+                <!-- Use the safe filter to render HTML -->
+                <p>{{ quotes | safe }}</p>
             </div>
         {% elif loading %}
             <p class="loading">Loading quotes...</p>
